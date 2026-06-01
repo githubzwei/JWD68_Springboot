@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h3>Major Create Form</h3>
+<form th:action="@{/major/create}" th:object="${majorObj}" method="post">
+Name <input type="text" th:field="*{majorName}"> <br>
+Marks <input type="text" th:field="*{marks}"> <br>
+<input type="submit" value="create">
+</form>
+</body>
+</html>
