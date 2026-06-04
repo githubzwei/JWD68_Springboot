@@ -1,0 +1,5 @@
+com\springboot\Jwd68SpringbootApplication.class
+com\springboot\controller\MajorController.class
+com\springboot\controller\IndexController.class
+com\springboot\repository\MajorRepository.class
+com\springboot\model\MajorBean.class

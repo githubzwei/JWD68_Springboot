@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title th:text="#{app.name}"></title>
+</head>
+<body>
+<h3 th:text="'Myanmar - '+ #{app.language.myanmar}"></h3>
+<h3>index.html</h3>
+<h3 th:text="${message}"></h3>
+<h3 th:text="${#strings.toUpperCase(message)}"></h3>
+<h3 th:text="${today}"></h3>
+<h3 th:text="${#temporals.format(today,'dd-MMM-yyyy')}"></h3>
+<h3 th:text="${today_date}"></h3>
+<h3 th:text="${#dates.format(today_date,'dd-MMM-yyyy')}"></h3>
+<p th:switch="${message}">
+	<span th:case="Spring">JWD with Spring MVC</span>
+	<span th:case="Springboot">JWD with Springboot</span>
+	<span th:case="*">JWD with JDBC</span>
+</p>
+
+</body>
+</html>

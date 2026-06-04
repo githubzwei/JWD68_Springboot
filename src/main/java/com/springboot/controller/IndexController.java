@@ -15,9 +15,16 @@ public class IndexController {
 	
 	@GetMapping("/")
 	public String showHomePage() {
-		return "home";
+		return "index";
 	}
 
+	@GetMapping("/form")
+	public String showMajorPage() {
+		return "create-major";
+	}
+
+	
+	
 	@GetMapping("/index")
 	public String showIndex(Model m) {
 		m.addAttribute("message", "Springboot");
