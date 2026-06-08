@@ -63,6 +63,14 @@ public class MajorRepository {
 		return majorObj;
 	}
 	
+	public int updateMajor(MajorBean obj) {
+		int i=0;
+		
+		String sql = "update major set major_name=? , marks=? where id=?";
+		i=jdbc.update(sql,obj.getMajorName(),obj.getMarks(),obj.getId());
+		return i;
+	}
+	
 	
 	
 }

@@ -28,9 +28,11 @@
 
                     <div class="card-body">
 
-                        <form th:action="@{/major/create}"
+                        <form th:action="@{/major/update}"
                               th:object="${majorObj}"
                               method="post">
+                              
+                              <input type="hidden" th:field="*{id}">
 
                             <div class="mb-3">
                                 <label for="majorName" class="form-label">
@@ -59,7 +61,7 @@
                             <div class="text-end">
                                 <button type="submit"
                                         class="btn btn-primary">
-                                    Create
+                                    Update
                                 </button>
 
                                 <button type="reset"

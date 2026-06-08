@@ -54,5 +54,15 @@ public class MajorController {
 		return new ModelAndView("major-edit","majorObj",obj);
 		
 	}
+	@PostMapping("/update")
+	public String updateMajor(@ModelAttribute("majorObj")MajorBean obj,Model m) {
+		int i=mRepo.updateMajor(obj);
+		if(i!=0) {
+			return "redirect:list";
+		}else {
+			m.addAttribute("fail","update fail!");
+			return "major-edit";
+		}
+	}
 	
 }
